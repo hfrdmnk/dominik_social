@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>@dominik.social</title>
+		<style>
+			:root {
+				--foreground-color: oklch(0.2736 0.0132 87.57);
+				--background-color: oklch(0.9753 0.004 106.47);
+				--accent-color: oklch(0.6792 0.2151 39.55);
+				--faded-color: color-mix(
+					in oklch,
+					var(--foreground-color) 40%,
+					var(--background-color)
+				);
+				--faded-accent-color: oklch(from var(--accent-color) l c h / 0.4);
+			}
+			* {
+				box-sizing: border-box;
+			}
+			::selection {
+				background-color: oklch(from var(--accent-color) l c h / 0.2);
+				color: var(--accent-color);
+			}
+			body {
+				font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo,
+					Consolas, 'DejaVu Sans Mono', monospace;
+				text-align: center;
+				min-height: 100dvh;
+				display: grid;
+				place-items: center;
+				padding: 2rem;
+				margin: 0;
+				color: var(--foreground-color);
+				background-color: var(--background-color);
+			}
+			h1 {
+				font-size: 1rem;
+				font-weight: 500;
+			}
+			.at {
+				color: var(--faded-color);
+				&::selection {
+					color: var(--faded-accent-color);
+				}
+			}
+			.link-wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 1.5rem;
+				margin-top: 1rem;
+				color: var(--faded-color);
+			}
+			a {
+				text-decoration: none;
+				color: inherit;
+				transition: color 0.3s ease-in-out;
+				flex: 0 0 auto;
+
+				&:hover {
+					color: var(--accent-color);
+				}
+			}
+			pre {
+				font-size: 0.25rem;
+				text-align: left;
+				word-break: normal;
+				white-space: pre;
+				user-select: none;
+			}
+			.sr-only {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				padding: 0;
+				margin: -1px;
+				overflow: hidden;
+				clip: rect(0, 0, 0, 0);
+				white-space: nowrap;
+				border-width: 0;
+			}
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--foreground-color: oklch(0.9753 0.004 106.47);
+					--background-color: oklch(14.7% 0.004 49.25);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1><span class="at">@</span>dominik.social</h1>
+			<div class="link-wrapper">
+				<a href="/b">
+					<pre>
+xxxxx              xxxxx
+xxxxxxx          xxxxxxx
+xxxxxxxxx      xxxxxxxxx
+xxxxxxxxxxx  xxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxx
+ xxxxxxxxxxxxxxxxxxxxxx
+  xxxxxxxxxxxxxxxxxxxX
+   Xxxxxxxxxxxxxxxxxx
+   xxxxxxxxxxxxxxxxxx
+   xxxxxxxx Xxxxxxxxx
+     xxxxx    xxxxx
+</pre
+					>
+					<span class="sr-only">Link to my Bluesky Account</span>
+				</a>
+				<a href="/m">
+					<pre>
+    xxxxxxxxxxxxxxxxx
+  xxxxxxxxxxxxxxxxxxxxX
+ xxxxx;:::;xx;:::;xxxxxX
+XXXXx:.:++:::.;+:.:xXXXX
+XXXXx..+XXx..xXXx..+XXXX
+XXXXx..+XXx..xXXx..+XXXX
+XXXXx..+XXx++xXXx..+XXXX
+XXXXx..+XXXXXXXXx..+XXXX
+ XXXXXXXXXXXXXXXXXXXXXX
+ XXXXXXXXXXXXXXXXXXXX
+  XXXXXX
+   XXXXXXXXXXXXXX
+     XXXXXXXXXXX
+</pre
+					>
+					<span class="sr-only">Link to my Mastodon Account</span>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

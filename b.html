@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="refresh"
+			content="0; url=https://bsky.app/profile/dominik.social" />
+		<title>Redirecting...</title>
+		<style>
+			:root {
+				--foreground-color: oklch(0.2736 0.0132 87.57);
+				--background-color: oklch(0.9753 0.004 106.47);
+				--faded-color: color-mix(
+					in oklch,
+					var(--foreground-color) 40%,
+					var(--background-color)
+				);
+			}
+			body {
+				font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo,
+					Consolas, 'DejaVu Sans Mono', monospace;
+				text-align: center;
+				min-height: 100dvh;
+				display: grid;
+				place-items: center;
+				padding: 2rem;
+				margin: 0;
+				color: var(--foreground-color);
+				background-color: var(--background-color);
+			}
+			p {
+				font-size: 0.875rem;
+			}
+			a {
+				color: inherit;
+				text-decoration-color: var(--faded-color);
+			}
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--foreground-color: oklch(0.9753 0.004 106.47);
+					--background-color: oklch(14.7% 0.004 49.25);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			If you are not redirected automatically,
+			<a href="https://bsky.app/profile/dominik.social">click here</a>.
+		</p>
+	</body>
+</html>
