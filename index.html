@@ -35,11 +35,11 @@
 				color: var(--foreground-color);
 				background-color: var(--background-color);
 			}
-			h1 {
+			.heading {
 				font-size: 1rem;
 				font-weight: 500;
 			}
-			.at {
+			.protocol {
 				color: var(--faded-color);
 				&::selection {
 					color: var(--faded-accent-color);
@@ -50,8 +50,10 @@
 				justify-content: center;
 				align-items: center;
 				gap: 1.5rem;
-				margin-top: 1rem;
-				color: var(--faded-color);
+				&:not(:first-child) {
+					margin-top: 1rem;
+					color: var(--faded-color);
+				}
 			}
 			a {
 				text-decoration: none;
@@ -91,9 +93,11 @@
 	</head>
 	<body>
 		<div>
-			<h1><span class="at">@</span>dominik.social</h1>
 			<div class="link-wrapper">
-				<a href="https://bsky.app/profile/dominik.social">
+				<h1 class="heading"><span class="protocol">@</span>dominik.social</h1>
+			</div>
+			<div class="link-wrapper">
+				<a href="https://bsky.app/profile/dominik.social?rel=dominik.social">
 					<pre>
 xxxxx              xxxxx
 xxxxxxx          xxxxxxx
@@ -110,7 +114,7 @@ xxxxxxxxxxxxxxxxxxxxxxxx
 					>
 					<span class="sr-only">Link to my Bluesky Account</span>
 				</a>
-				<a href="https://social.lol/@dominikhofer">
+				<a href="https://social.lol/@dominikhofer?rel=dominik.social">
 					<pre>
     xxxxxxxxxxxxxxxxx
   xxxxxxxxxxxxxxxxxxxxX
@@ -129,6 +133,13 @@ XXXXx..+XXXXXXXXx..+XXXX
 					>
 					<span class="sr-only">Link to my Mastodon Account</span>
 				</a>
+			</div>
+			<div class="link-wrapper">
+				<h2 class="heading">
+					<a href="https://dominikhofer.me?rel=dominik.social"
+						><span class="protocol">https://</span>dominikhofer.me</a
+					>
+				</h2>
 			</div>
 		</div>
 	</body>
